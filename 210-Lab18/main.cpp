@@ -20,6 +20,25 @@ int main() {
     int choice;
     cin >> choice;
     
+    Node *head = nullptr;
+    Node *newVal = new Node;
+    if (choice == 1) {
+        //add node at head
+        if (!head) {
+            head = newVal;
+            newVal->next = nullptr;
+            cout << "Enter review rating 0-5: ";
+            cin >> newVal->rating;
+            cout << "Enter reviewer comments: ";
+            cin >> newVal->comment;
+        }
+    }
+    else {
+        newVal->next = head;
+        cout << "Enter review rating 0-5: ";
+        cin >> newVal->rating;
+        
+    }
     
     
 }
