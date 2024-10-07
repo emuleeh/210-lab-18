@@ -50,14 +50,27 @@ int main() {
             cout << "Enter review rating 0-5: ";
             cin >> newVal->rating;
             cout << "Enter review comments: ";
-            cin >> newVal->
-        
-                
+            cin >> newVal->comment;
         }
     }
-        
+    //output linked list
+    output(head);
 }
-    
-    
-    
+
+//function to output linked list
+void output(Node *head) {
+    if (!head) {
+        cout << "No review to display.\n" << endl;
+        return;
+    }
+    //traverse linked list to output nodes
+    Node *current = head;
+    int count = 1;
+    while (current) {
+        cout << "Review #" << count << ": ";
+        cout << current->rating << " " << current->comment << endl;
+        current = current->next;
+        count++;
+    }
+    cout << endl;
 }
