@@ -52,6 +52,17 @@ int main() {
             cout << "Enter review comments: ";
             cin >> newVal->comment;
         }
+        else {
+            Node* last = head;
+            while (last->next != nullptr) {
+                last = last->next;
+            }
+            last->next = newVal;
+            cout << "Enter review rating 0-5: ";
+            cin >> newVal->rating;
+            cout << "Enter review comments: ";
+            cin >> newVal->comment;
+        }
     }
     //output linked list
     output(head);
