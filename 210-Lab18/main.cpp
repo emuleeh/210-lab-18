@@ -32,13 +32,32 @@ int main() {
             cout << "Enter reviewer comments: ";
             cin >> newVal->comment;
         }
+        else {
+            newVal->next = head;
+            cout << "Enter review rating 0-5: ";
+            cin >> newVal->rating;
+            cout << "Enter reviewer comments: ";
+            cin >> newVal->comment;
+            head = newVal;
+            }
     }
     else {
-        newVal->next = head;
-        cout << "Enter review rating 0-5: ";
-        cin >> newVal->rating;
+        //add node at tail
+        Node *newVal = new Node;
+        if (!head) {
+            head = newVal;
+            newVal->next = nullptr;
+            cout << "Enter review rating 0-5: ";
+            cin >> newVal->rating;
+            cout << "Enter review comments: ";
+            cin >> newVal->
         
+                
+        }
     }
+        
+}
+    
     
     
 }
